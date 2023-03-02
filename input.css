@@ -1,0 +1,78 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.slider-container{
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+.left-slide{
+    width: 35%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform .5s ease-in-out;
+}
+.left-slide > div{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.left-slide > div h1{
+    font-size: 40px;
+    margin-top: -30px;
+}
+.right-slide{
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 35%;
+    width: 65%;
+    transition: transform .5s ease-in-out;
+}
+.right-slide > div{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+}
+
+button{
+    background-color: white;
+    border: none;
+    color: #aaa;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 15px;
+}
+button:hover{
+    color: #000;
+}
+button:focus{
+    outline: none;
+}
+.slider-container .action-buttons button{
+    position: absolute;
+    left: 35%;
+    top: 50%;
+    z-index: 10;
+}
+.slider-container .action-buttons .down{
+    transform: translateX(-100%);
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+.slider-container .action-buttons .up{
+    transform: translateY(-100%);
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
